@@ -10,7 +10,7 @@ type SidebarProps = {
 
 export const Sidebar = ({ drawerOpen, drawerToggle }: SidebarProps) => {
   const theme = useTheme();
-  const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
+  const matchDownSm = useMediaQuery(theme.breakpoints.down('md'));
 
   const drawer = (
     <>
@@ -25,11 +25,11 @@ export const Sidebar = ({ drawerOpen, drawerToggle }: SidebarProps) => {
   return (
     <Box
       component='nav'
-      sx={{ flexShrink: { md: 0 }, width: matchUpMd ? drawerWidth : 'auto' }}
+      sx={{ flexShrink: { md: 0 }, width: matchDownSm ? 'auto' : drawerWidth }}
       aria-label='mailbox folders'
     >
       <Drawer
-        variant={matchUpMd ? 'persistent' : 'temporary'}
+        variant={matchDownSm ? 'temporary' : 'persistent'}
         anchor='left'
         open={drawerOpen}
         onClose={drawerToggle}

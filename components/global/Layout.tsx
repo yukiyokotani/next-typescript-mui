@@ -1,5 +1,13 @@
-import { AppBar, Box, styled, Theme, Toolbar, useTheme } from '@mui/material';
-import { useCallback, useState } from 'react';
+import {
+  AppBar,
+  Box,
+  styled,
+  Theme,
+  Toolbar,
+  useMediaQuery,
+  useTheme
+} from '@mui/material';
+import { useCallback, useEffect, useState } from 'react';
 
 import { drawerWidth, headerHeight } from '../../utils/constants';
 
@@ -64,12 +72,17 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   const theme = useTheme();
+  const matchDownSm = useMediaQuery(theme.breakpoints.down('md'));
 
   const [leftDrawerOpened, setLeftDrawerOpened] = useState(true);
 
   const handleLeftDrawerToggle = useCallback(() => {
     setLeftDrawerOpened(!leftDrawerOpened);
   }, [leftDrawerOpened]);
+
+  useEffect(() => {
+    setLeftDrawerOpened(!matchDownSm);
+  }, [matchDownSm]);
 
   return (
     <Box sx={{ display: 'flex' }}>
