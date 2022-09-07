@@ -48,7 +48,7 @@ export const NavItem = ({ item, level }: NavItemProps) => {
         </ListItemIcon>
         <ListItemText
           primary={
-            <Typography variant='h6' color='inferit'>
+            <Typography variant='body1' color='inferit'>
               {item.title}
             </Typography>
           }

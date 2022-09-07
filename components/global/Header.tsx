@@ -1,6 +1,9 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, Box, ButtonBase, Typography, useTheme } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
+
+import { headerHeight } from '../../constants';
 
 type HeaderProps = {
   handleLeftDrawerToggle: () => void;
@@ -30,7 +33,15 @@ export const Header = ({ handleLeftDrawerToggle }: HeaderProps) => {
               cursor: 'pointer'
             }}
           >
-            <Typography variant='h4'>SAMPLE</Typography>
+            <Image
+              src='/react.svg'
+              alt='logo'
+              width={headerHeight * 0.4}
+              height={headerHeight * 0.4}
+            />
+            <Box ml={1.5}>
+              <Typography variant='h4'>SAMPLE APP</Typography>
+            </Box>
           </Box>
         </Link>
         <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }}>

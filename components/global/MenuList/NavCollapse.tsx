@@ -67,7 +67,7 @@ export const NavCollapse = ({ menu, level }: NavCollapseProps) => {
           mb: 0.5,
           alignItems: 'flex-start',
           backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
-          by: level > 1 ? 1 : 1.25,
+          py: level > 1 ? 1 : 1.25,
           pl: `${level * 24}px`
         }}
         selected={selected === menu.id}

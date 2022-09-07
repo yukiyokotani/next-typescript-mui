@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { useCallback, useEffect, useState } from 'react';
 
-import { drawerWidth, headerHeight } from '../../utils/constants';
+import { drawerWidth, headerHeight } from '../../constants';
 
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';

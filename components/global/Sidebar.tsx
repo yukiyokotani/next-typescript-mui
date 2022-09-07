@@ -1,7 +1,7 @@
 import { Box, Drawer, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import { drawerWidth, headerHeight } from '../../utils/constants';
+import { drawerWidth, headerHeight } from '../../constants';
 
 import { MenuList } from './MenuList/MenuList';
 
