@@ -14,7 +14,6 @@ import Document, {
   DocumentContext
 } from 'next/document';
 
-import theme from '../mui/theme';
 import createEmotionCache from '../utils/createEmotionCache';
 
 export default function MyDocument({

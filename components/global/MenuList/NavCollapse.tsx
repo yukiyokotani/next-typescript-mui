@@ -63,7 +63,7 @@ export const NavCollapse = ({ menu, level }: NavCollapseProps) => {
     <>
       <ListItemButton
         sx={{
-          borderRadius: 8,
+          borderRadius: 2,
           mb: 0.5,
           alignItems: 'flex-start',
           backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
@@ -111,14 +111,13 @@ export const NavCollapse = ({ menu, level }: NavCollapseProps) => {
           sx={{
             position: 'relative',
             '&:after': {
-              content: "'",
+              content: "''",
               position: 'absolute',
-              left: 32,
+              left: '32px',
               top: 0,
               height: '100%',
-              width: 1,
-              opacity: 1,
-              background: theme.palette.primary.light
+              width: '1px',
+              background: theme.palette.divider
             }
           }}
         >

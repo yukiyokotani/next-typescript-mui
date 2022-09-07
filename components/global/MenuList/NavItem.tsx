@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { MenuItem } from './menuItems';
+
 type NavItemProps = {
   item: MenuItem;
   level: number;
@@ -30,7 +31,18 @@ export const NavItem = ({ item, level }: NavItemProps) => {
 
   return (
     <Link href={item.url}>
-      <ListItemButton selected={isSelected}>
+      <ListItemButton
+        disabled={item.disabled}
+        sx={{
+          borderRadius: 2,
+          mb: 0.5,
+          alignItems: 'flex-start',
+          backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
+          py: level > 1 ? 1 : 1.25,
+          pl: `${level * 24}px`
+        }}
+        selected={isSelected}
+      >
         <ListItemIcon sx={{ my: 'auto', minWidth: !item.icon ? 18 : 36 }}>
           {itemIcon}
         </ListItemIcon>

@@ -4,14 +4,14 @@ import { TypographyOptions } from '@mui/material/styles/createTypography';
 const typography = (palette: Palette): TypographyOptions => ({
   fontFamily: 'sans-serif',
   h6: {
-    fontWeight: 500,
+    fontWeight: 400,
     color: palette.text.primary,
     fontSize: '0.75rem'
   },
   h5: {
     fontSize: '0.875rem',
     color: palette.text.primary,
-    fontWeight: 500
+    fontWeight: 600
   },
   h4: {
     fontSize: '1rem',

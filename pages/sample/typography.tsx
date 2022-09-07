@@ -1,133 +1,276 @@
-import { Box, Card, Grid, Link, Typography } from '@mui/material';
+import {
+  Breadcrumbs,
+  Card,
+  Divider,
+  Grid,
+  Link,
+  Stack,
+  styled,
+  Typography
+} from '@mui/material';
 
-// ==============================|| TYPOGRAPHY ||============================== //
+const TypographyCard = styled(Card)({
+  padding: 16
+});
 
 const TypographySample = () => (
-  <Box p={2}>
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
-        <Card title='Heading'>
-          <Box p={2}>
-            <Grid container direction='column' spacing={1}>
-              <Grid item>
-                <Typography variant='h1' gutterBottom>
-                  h1. Heading
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='h2' gutterBottom>
-                  h2. Heading
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='h3' gutterBottom>
-                  h3. Heading
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='h4' gutterBottom>
-                  h4. Heading
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='h5' gutterBottom>
-                  h5. Heading
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='h6' gutterBottom>
-                  h6. Heading
-                </Typography>
-              </Grid>
-            </Grid>
-          </Box>
-        </Card>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Card title='Sub title'>
-          <Box p={2}>
-            <Grid container direction='column' spacing={1}>
-              <Grid item>
-                <Typography variant='subtitle1' gutterBottom>
-                  subtitle1. Lorem ipsum dolor sit connecter adieu siccing
-                  eliot. Quos blanditiis tenetur
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='subtitle2' gutterBottom>
-                  subtitle2. Lorem ipsum dolor sit connecter adieu siccing
-                  eliot. Quos blanditiis tenetur
-                </Typography>
-              </Grid>
-            </Grid>
-          </Box>
-        </Card>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Card title='Body'>
-          <Box p={2}>
-            <Grid container direction='column' spacing={1}>
-              <Grid item>
-                <Typography variant='body1' gutterBottom>
-                  body1. Lorem ipsum dolor sit connecter adieu siccing eliot.
-                  Quos blanditiis tenetur unde suscipit, quam beatae rerum
-                  inventore consectetur, neque doloribus, cupiditate numquam
-                  dignissimos laborum fugiat deleniti? Eum quasi quidem
-                  quibusdam.
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='body2' gutterBottom>
-                  body2. Lorem ipsum dolor sit connecter adieu siccing eliot.
-                  Quos blanditiis tenetur unde suscipit, quam beatae rerum
-                  inventore consectetur, neque doloribus, cupiditate numquam
-                  dignissimos laborum fugiat deleniti? Eum quasi quidem
-                  quibusdam.
-                </Typography>
-              </Grid>
-            </Grid>
-          </Box>
-        </Card>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <Card title='Extra'>
-          <Box p={2}>
-            <Grid container direction='column' spacing={1}>
-              <Grid item>
-                <Typography variant='button' display='block' gutterBottom>
-                  button text
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='caption' display='block' gutterBottom>
-                  caption text
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='overline' display='block' gutterBottom>
-                  overline text
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant='body2'
-                  color='primary'
-                  component={Link}
-                  href='https://berrydashboard.io'
-                  target='_blank'
-                  display='block'
-                  underline='hover'
-                  gutterBottom
-                >
-                  https://berrydashboard.io
-                </Typography>
-              </Grid>
-            </Grid>
-          </Box>
-        </Card>
-      </Grid>
+  <Grid container spacing={3}>
+    <Grid item xs={12} lg={6}>
+      <Stack spacing={3}>
+        <TypographyCard>
+          <Stack spacing={2}>
+            <Typography variant='h1'>H1 Heading</Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 38px</Typography>
+              <Typography variant='h6'>Weight: Bold</Typography>
+              <Typography variant='h6'>Line Height: 46px</Typography>
+            </Breadcrumbs>
+            <Divider />
+
+            <Typography variant='h2'>H2 Heading</Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 30px</Typography>
+              <Typography variant='h6'>Weight: Bold</Typography>
+              <Typography variant='h6'>Line Height: 38px</Typography>
+            </Breadcrumbs>
+            <Divider />
+
+            <Typography variant='h3'>H3 Heading</Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 24px</Typography>
+              <Typography variant='h6'>Weight: Regular & Bold</Typography>
+              <Typography variant='h6'>Line Height: 32px</Typography>
+            </Breadcrumbs>
+            <Divider />
+
+            <Typography variant='h4'>H4 Heading</Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 20px</Typography>
+              <Typography variant='h6'>Weight: Bold</Typography>
+              <Typography variant='h6'>Line Height: 28px</Typography>
+            </Breadcrumbs>
+            <Divider />
+
+            <Typography variant='h5'>H5 Heading</Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 16px</Typography>
+              <Typography variant='h6'>
+                Weight: Regular & Medium & Bold
+              </Typography>
+              <Typography variant='h6'>Line Height: 24px</Typography>
+            </Breadcrumbs>
+            <Divider />
+
+            <Typography variant='h6'>H6 Heading / Subheading</Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 14px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 22px</Typography>
+            </Breadcrumbs>
+          </Stack>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='body1' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 14px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 22px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='body2' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 12px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 20px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='subtitle1' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 14px</Typography>
+              <Typography variant='h6'>Weight: Medium</Typography>
+              <Typography variant='h6'>Line Height: 22px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='subtitle2' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 12px</Typography>
+              <Typography variant='h6'>Weight: Medium</Typography>
+              <Typography variant='h6'>Line Height: 20px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <Stack spacing={1}>
+            <Typography variant='caption'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 12px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 20px</Typography>
+            </Breadcrumbs>
+          </Stack>
+        </TypographyCard>
+      </Stack>
     </Grid>
-  </Box>
+    <Grid item xs={12} lg={6}>
+      <Stack spacing={3}>
+        <TypographyCard>
+          <>
+            <Typography variant='body2' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography variant='body2' textAlign='center' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography variant='body2' textAlign='right'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='body1' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography variant='body2' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 12px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 20px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <Stack spacing={1.5}>
+            <Typography variant='overline'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 12px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 20px</Typography>
+            </Breadcrumbs>
+          </Stack>
+        </TypographyCard>
+        <TypographyCard>
+          <Stack spacing={1.5}>
+            <Link href='#'>www.mantis.com</Link>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 12px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 20px</Typography>
+            </Breadcrumbs>
+          </Stack>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='h6' color='textPrimary' gutterBottom>
+              This is textPrimary text color.
+            </Typography>
+            <Typography variant='h6' color='textSecondary' gutterBottom>
+              This is textSecondary text color.
+            </Typography>
+            <Typography variant='h6' color='primary' gutterBottom>
+              This is primary text color.
+            </Typography>
+            <Typography variant='h6' color='secondary' gutterBottom>
+              This is secondary text color.
+            </Typography>
+            <Typography variant='h6' color='success.main' gutterBottom>
+              This is success text color.
+            </Typography>
+            <Typography
+              variant='h6'
+              sx={{ color: 'warning.main' }}
+              gutterBottom
+            >
+              This is warning text color.
+            </Typography>
+            <Typography variant='h6' color='error' gutterBottom>
+              This is error text color.
+            </Typography>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography variant='body1' gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 14px</Typography>
+              <Typography variant='h6'>Weight: Regular</Typography>
+              <Typography variant='h6'>Line Height: 22px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+        <TypographyCard>
+          <>
+            <Typography
+              variant='body1'
+              gutterBottom
+              sx={{ fontStyle: 'italic' }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography
+              variant='subtitle1'
+              gutterBottom
+              sx={{ fontStyle: 'italic' }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Breadcrumbs aria-label='breadcrumb'>
+              <Typography variant='h6'>Size: 14px</Typography>
+              <Typography variant='h6'>
+                Weight: Italic Regular & Italic Bold
+              </Typography>
+              <Typography variant='h6'>Line Height: 22px</Typography>
+            </Breadcrumbs>
+          </>
+        </TypographyCard>
+      </Stack>
+    </Grid>
+  </Grid>
 );
 
 export default TypographySample;
