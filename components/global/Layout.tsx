@@ -16,14 +16,11 @@ import { Sidebar } from './Sidebar';
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }: { theme: Theme; open: boolean }) => ({
-    backgroundColor: theme.palette.background.default,
     width: '100%',
     minHeight: `calc(100vh - ${headerHeight}px)`,
     flexGrow: 1,
     padding: '20px',
     marginTop: `${headerHeight}px`,
-    marginRight: '20px',
-    borderRadius: '8px',
     ...(!open && {
       borderBottomLeftRadius: 0,
       borderBottomRightRadius: 0,
@@ -32,7 +29,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
         duration: theme.transitions.duration.leavingScreen
       }),
       [theme.breakpoints.up('md')]: {
-        marginLeft: -(drawerWidth - 20),
+        marginLeft: -drawerWidth,
         width: `calc(100% - ${drawerWidth}px)`
       },
       [theme.breakpoints.down('md')]: {
@@ -53,8 +50,6 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
         duration: theme.transitions.duration.enteringScreen
       }),
       marginLeft: 0,
-      borderBottomLeftRadius: 0,
-      borderBottomRightRadius: 0,
       width: `calc(100% - ${drawerWidth}px)`,
       [theme.breakpoints.down('md')]: {
         marginLeft: '20px'
@@ -93,7 +88,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
         color='inherit'
         elevation={0}
         sx={{
-          bgcolor: '#fff',
+          bgcolor: theme.palette.background.paper,
           transition: leftDrawerOpened
             ? theme.transitions.create('width')
             : 'none'

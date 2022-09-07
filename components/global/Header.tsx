@@ -1,5 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, Box, ButtonBase, Typography, useTheme } from '@mui/material';
+import Link from 'next/link';
 
 type HeaderProps = {
   handleLeftDrawerToggle: () => void;
@@ -20,15 +21,18 @@ export const Header = ({ handleLeftDrawerToggle }: HeaderProps) => {
           }
         }}
       >
-        <Box
-          sx={{
-            display: { xs: 'none', md: 'flex' },
-            flexGrow: 1,
-            alignItems: 'center'
-          }}
-        >
-          <Typography variant='h4'>SAMPLE</Typography>
-        </Box>
+        <Link href='/'>
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              flexGrow: 1,
+              alignItems: 'center',
+              cursor: 'pointer'
+            }}
+          >
+            <Typography variant='h4'>SAMPLE</Typography>
+          </Box>
+        </Link>
         <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }}>
           <Avatar
             variant='rounded'
@@ -39,11 +43,11 @@ export const Header = ({ handleLeftDrawerToggle }: HeaderProps) => {
               height: '34px',
               fontSize: '1.2rem',
               transition: 'all .2s ease-in-out',
-              background: theme.palette.primary.light,
-              color: theme.palette.primary.dark,
+              background: theme.palette.action.selected,
+              color: theme.palette.text.secondary,
               '&:hover': {
-                background: theme.palette.primary.dark,
-                color: theme.palette.primary.light
+                background: theme.palette.action.selected,
+                color: theme.palette.text.primary
               }
             }}
             onClick={handleLeftDrawerToggle}

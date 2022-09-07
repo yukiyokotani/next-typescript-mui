@@ -20,7 +20,7 @@ export default function MyApp({
   emotionCache = clientSideEmotionCache,
   pageProps
 }: MyAppProps) {
-  const [paletteMode] = useState<PaletteMode>('light');
+  const [paletteMode] = useState<PaletteMode>('dark');
 
   return (
     <CacheProvider value={emotionCache}>

@@ -3,6 +3,8 @@ import { useTheme } from '@mui/material/styles';
 
 import { drawerWidth, headerHeight } from '../../utils/constants';
 
+import { MenuList } from './MenuList/MenuList';
+
 type SidebarProps = {
   drawerOpen: boolean;
   drawerToggle: () => void;
@@ -14,10 +16,8 @@ export const Sidebar = ({ drawerOpen, drawerToggle }: SidebarProps) => {
 
   const drawer = (
     <>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-        <Box sx={{ display: 'flex', p: 2, mx: 'auto' }}>
-          <div>test</div>
-        </Box>
+      <Box padding={2}>
+        <MenuList />
       </Box>
     </>
   );
@@ -36,7 +36,7 @@ export const Sidebar = ({ drawerOpen, drawerToggle }: SidebarProps) => {
         sx={{
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            background: '#fff',
+            background: theme.palette.background.paper,
             color: theme.palette.text.primary,
             borderRight: 'none',
             [theme.breakpoints.up('md')]: {

@@ -16,10 +16,28 @@ const palettes: PaletteOptions[] = [
     action: {
       disabled: grey[300]
     },
-    divider: grey[200],
     background: {
-      paper: '#fff',
-      default: grey[50]
+      paper: grey[50],
+      default: grey[200]
+    }
+  },
+  {
+    mode: 'dark',
+    common: {
+      black: '#000',
+      white: '#fff'
+    },
+    text: {
+      primary: grey[50],
+      secondary: grey[400],
+      disabled: grey[500]
+    },
+    action: {
+      disabled: grey[600]
+    },
+    background: {
+      paper: grey[900],
+      default: grey[800]
     }
   }
 ];
